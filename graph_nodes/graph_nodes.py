@@ -1,7 +1,8 @@
 import random
+random.seed(10)
 
 
-class Graph_Nodes:
+class Graph_Node:
     def __init__(self, number_indicators, csv_name=None):
         self.number_indicators = number_indicators
 
