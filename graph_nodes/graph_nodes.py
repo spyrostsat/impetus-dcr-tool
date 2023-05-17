@@ -3,8 +3,10 @@ random.seed(10)
 
 
 class Graph_Node:
-    def __init__(self, number_indicators, csv_name=None):
-        self.number_indicators = number_indicators
+    def __init__(self, indicator_values, name, year):
+        self.indicators_values = indicator_values
+        self.name = name
+        self.year = year
 
-        if csv_name is None:
-            self.indicators_values = [random.randrange(70, 90) for _ in range(self.number_indicators)]  # at year 2020
+    def __str__(self):
+        return f"Graph_Node(indicator_values={self.indicators_values}, name={self.name}"
