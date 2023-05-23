@@ -61,7 +61,7 @@ class DS_Environment:
 
         # INTERVENTIONS SECTION
 
-        self.interventions = ["Do Nothing", "Sewer Mining", "Rainwater Harvesting", "SUBSOL", "Forests EWSs", "Groundwater Usage"]
+        self.interventions = ["Do Nothing", "Sewer Mining", "Rainwater Harvesting", "Subsol", "Forests EWSs", "Groundwater Usage"]
         self.number_interventions = len(self.interventions)
 
         self.indicators_interventions_rel = []
@@ -74,7 +74,7 @@ class DS_Environment:
                     self.indicators_interventions_rel[i].append(random.randrange(1, 11))
 
         self.interventions_costs_names = ["Cost", "Technology readiness level", "Societal readiness level", "Time to implementation [years]",
-                                    "Hidden risks - disadvantages of intervention", "Feasibility"]
+                                          "Hidden risks - disadvantages of intervention", "Feasibility"]
         self.number_interventions_costs = len(self.interventions_costs_names)
 
         self.interventions_costs = []
