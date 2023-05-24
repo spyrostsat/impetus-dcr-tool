@@ -19,7 +19,7 @@ class DS_Environment:
             self.number_indicators = len(self.indicators)
             self.number_sc_variables = len(self.sc_variables)
             self.start_date = 2020
-            self.stop_date = 2050
+            self.stop_date = 2040
 
             self.indicators_thresholds = [random.randrange(40, 60) for _ in range(self.number_indicators)]
 
@@ -85,4 +85,3 @@ class DS_Environment:
                     self.interventions_costs[i].append(0)
                 else:
                     self.interventions_costs[i].append(random.randrange(1, 11))
-

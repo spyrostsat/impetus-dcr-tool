@@ -5,4 +5,7 @@ class Graph_Node:
         self.year = year
 
     def __str__(self):
-        return f"{self.name} - {self.indicators_values}"
+        return f"{self.name} {self.indicators_values}"
+
+    def __repr__(self):
+        return f"{self.name} {self.indicators_values}"
