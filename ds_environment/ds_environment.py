@@ -62,6 +62,7 @@ class DS_Environment:
         # INTERVENTIONS SECTION
 
         self.interventions = ["Do Nothing", "Sewer Mining", "Rainwater Harvesting", "Subsol", "Forests EWSs", "Groundwater Usage"]
+        # self.interventions = ["Do Nothing", "Sewer Mining"]
         self.number_interventions = len(self.interventions)
 
         self.indicators_interventions_rel = []
@@ -73,8 +74,10 @@ class DS_Environment:
                 else:
                     self.indicators_interventions_rel[i].append(random.randrange(1, 11))
 
+        # all intervention costs get values closer to 10 as they get worse. E.g., the biggest Cost is 10 but the biggest feasibility is 1
         self.interventions_costs_names = ["Cost", "Technology readiness level", "Societal readiness level", "Time to implementation [years]",
                                           "Hidden risks - disadvantages of intervention", "Feasibility"]
+
         self.number_interventions_costs = len(self.interventions_costs_names)
 
         self.interventions_costs = []
