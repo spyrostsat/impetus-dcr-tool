@@ -7,6 +7,8 @@ def print_graph_nodes_edges(demo_site: DS_Environment, graph: DiGraph):
 
     print(list(graph.nodes())[1], "\n")
 
+    print(list(graph.nodes()))
+
     for i in range(len(list(graph.nodes())) - 2):
         current_node = list(graph.nodes())[i + 2]
         print(current_node)
