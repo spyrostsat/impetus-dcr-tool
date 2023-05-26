@@ -1,0 +1,51 @@
+Attica
+
+water scarcity
+
+water availability per capita,water use per capita,water storage capacity,water quality,groundwater levels,water reuse rate
+
+population growth,urbanization rates,income,ghg emissions,temperature,rainfall
+
+do nothing,sewer mining,rainwater harvesting,SUBSOL,Forest EWSs,Groundwater Usage
+
+Cost,TRL,SRL,Implementation time,Hidden risks,Feasibility
+
+5
+
+2020
+
+2040
+
+60,70,55,40,55,60
+
+1,1,1,1,1,1
+
+0.9578,0.9795,0.9698,0.9818,0.9776,0.9653
+0.9590,0.9683,0.9519,0.9584,0.9860,0.9992
+0.9671,0.9531,0.9519,0.9757,0.9687,0.9865
+0.9824,0.9995,0.9662,0.9569,0.9512,0.9626
+0.9688,0.9605,0.9784,0.9818,0.9703,0.9555
+0.9647,0.9743,0.9904,0.9882,0.9856,0.9913
+
+1,1,-1,1,1,-1
+
+0.85,0.884,0.91936,0.9561344,1.013502464
+0.83,0.8798,0.932588,0.98854328,1.077512175
+0.7,0.714,0.72828,0.7428456,0.7428456
+0.6,0.66,0.726,0.7986,0.91839
+0.5,0.53,0.5618,0.595508,0.64910372
+0.6,0.624,0.64896,0.6749184,0.695165952
+
+0,0,0,0,0,0
+1,5,2,0,5,9
+5,9,7,3,6,2
+3,8,5,8,2,1
+6,8,6,2,2,2
+6,2,7,2,9,9
+
+0,9,9,0,0,9
+10,8,3,1,7,1
+3,7,4,1,6,3
+5,6,5,3,8,2
+8,9,7,5,3,4
+2,9,9,2,6,9
