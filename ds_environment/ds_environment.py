@@ -15,8 +15,6 @@ class DS_Environment:
                         if row:
                             all_data.append(row)
 
-                    print(all_data)
-
                     # GENERAL DEMO SITE PARAMETERS
                     self.ds_name = all_data[0][0]
 
@@ -102,7 +100,6 @@ class DS_Environment:
                         self.interventions_costs[i] = [int(d) for d in self.interventions_costs[i]]
                         row_to_read += 1
 
-                    print(self.interventions_costs)
             except FileNotFoundError:
                 print("Wrong file path...")
 

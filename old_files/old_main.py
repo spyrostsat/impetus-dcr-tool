@@ -28,32 +28,20 @@ def main():
 
     shortest_path_dijkstra = perform_dijkstra(graph, list(graph.nodes())[0], list(graph.nodes())[1])
 
-    # PRINT THE GRAPH SECTION
+    T = nx.bfs_tree(graph, list(graph.nodes())[0])
 
-    # Set up the figure and axis
-    fig, ax = plt.subplots(figsize=(8, 6))
+    graph.add_node(list(graph.nodes())[0])  # at year 2020))
+    # pos = nx.spring_layout(T)  # Positions of the nodes
+    pos = graphviz_layout(T, prog="dot")
 
-    # Generate the layout using the Graphviz layout engine
-    pos = nx.nx_agraph.graphviz_layout(graph, prog='dot', args='-Grankdir=LR')
+    nx.draw(T, pos, with_labels=True, font_size=6)
 
-    # Draw the nodes
-    nx.draw_networkx_nodes(graph, pos, node_size=200, ax=ax)
-
-    # Draw the edges
-    nx.draw_networkx_edges(graph, pos, ax=ax)
-
-    # Draw node labels
-    nx.draw_networkx_labels(graph, pos, font_size=10, ax=ax)
-
-    # Adjust plot limits to avoid cropping
-    ax.margins(0.1)
-
-    # Display the plot
-    plt.tight_layout()
-    plt.axis('off')
+    # # Plot Graph
+    # nx.draw(graph, with_labels=True)
 
     # # Display the plot
     plt.show()
+
 
 if __name__ == "__main__":
     main()
