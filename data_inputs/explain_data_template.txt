@@ -1,0 +1,34 @@
+#1: name of DS
+
+#3: names of climate risks
+
+#5: names of indicators
+
+#7: names of sc variables
+
+#9: names of interventions 
+
+#11: names of intervention costs
+
+#13: unit time step
+
+#15: start date
+
+#17: stop date
+
+#19: indicators thresholds
+
+#21-number of climate risks: whether all indicators are associated with all risks
+
+#previous+2-number of indicators: unit reduction of indicator for sc variables
+
+#previous+2: signs of sc variables effect 
+
+#previous+2-sc_variables: sc_variables timeseries 
+
+#previous+2-number_of_interventions: interventions_indicators_rel
+
+#previous+2-number_of_interventions: interventions_costs
+
+#previous+2: initial indicators_values
+

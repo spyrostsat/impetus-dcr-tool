@@ -3,6 +3,7 @@ from graph_nodes.graph_nodes import Graph_Node
 import numpy as np
 import random
 
+
 def compute_indicator_values(demo_site: DS_Environment, previous_node: Graph_Node, intervention_name: str):
     previous_indicator_values = np.array(previous_node.indicators_values)
     previous_year = previous_node.year
@@ -54,16 +55,8 @@ def compute_moving_cost(demo_site: DS_Environment, previous_node: Graph_Node, in
     return total_moving_cost
 
 
-def compute_new_node(demo_site: DS_Environment, previous_node: Graph_Node = None, intervention_name: str = ""):
-    if previous_node is None:
-        initial_indicator_values = [random.randrange(70, 90) for _ in range(demo_site.number_indicators)]
-        return Graph_Node(initial_indicator_values, "2020", 2020)
-    else:
-
-        indicator_values = compute_indicator_values(demo_site, previous_node, intervention_name)
-        new_node = Graph_Node(indicator_values, f"{previous_node.year + demo_site.unit_time_step}_{intervention_name}",
-                           previous_node.year + demo_site.unit_time_step)
-
-        moving_cost = compute_moving_cost(demo_site, previous_node, intervention_name, new_node)
-
-        return new_node, moving_cost
+def compute_new_node(demo_site: DS_Environment, previous_node: Graph_Node, intervention_name: str, child_name: str):
+    indicator_values = compute_indicator_values(demo_site, previous_node, intervention_name)
+    new_node = Graph_Node(indicator_values, child_name, previous_node.year + demo_site.unit_time_step, previous_node.interventions)
+    moving_cost = compute_moving_cost(demo_site, previous_node, intervention_name, new_node)
+    return new_node, moving_cost

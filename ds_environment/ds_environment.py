@@ -100,6 +100,10 @@ class DS_Environment:
                         self.interventions_costs[i] = [int(d) for d in self.interventions_costs[i]]
                         row_to_read += 1
 
+                    self.initial_indicators_values = all_data[row_to_read]
+                    self.initial_indicators_values = [float(d) for d in self.initial_indicators_values]
+                    row_to_read += 1
+
             except FileNotFoundError:
                 print("Wrong file path...")
 
