@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def main():
-    attica_ds = DS_Environment(csv_name="./data_inputs/data_template_2.csv")
+    attica_ds = DS_Environment(csv_name="./data_inputs/data_template.csv")
 
     all_interventions = attica_ds.interventions
     all_interventions_numbers = [i for i in range(len(all_interventions))]
