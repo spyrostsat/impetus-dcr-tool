@@ -1,7 +1,6 @@
 from ds_environment.ds_environment import DS_Environment
 from graph_nodes.graph_nodes import Graph_Node
 import numpy as np
-import random
 
 
 def compute_indicator_values(demo_site: DS_Environment, previous_node: Graph_Node, intervention_name: str):

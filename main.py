@@ -1,33 +1,35 @@
 import random
 import networkx as nx
-import matplotlib.pyplot as plt
 import warnings
-from utils.shortest_path_dijkstra import perform_dijkstra
-from utils.fill_graph import fill_graph
-from utils.pathways_generator import generate_pathways
-from utils.graph_nodes_edges_print import print_graph_nodes_edges
 from utils.plot_graph import plot_graph
+from utils.shortest_path_dijkstra import perform_dijkstra
+from utils.shortest_path_astar import perform_astar
+from utils.fill_graph import fill_graph
 random.seed(10)
-
+from time import time
 from ds_environment.ds_environment import DS_Environment
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def main():
-    attica_ds = DS_Environment(csv_name="./data_inputs/data_template_2.csv")
-
-    all_interventions = attica_ds.interventions
-    # all_interventions_numbers = [i for i in range(len(all_interventions))]
-
-    # pathways = generate_pathways(all_interventions_numbers, attica_ds.total_time_steps) # these are all the possible pathways
+    time_start = time()
+    attica_ds = DS_Environment(csv_name="./data_inputs/data_template_3.csv")
 
     graph = nx.DiGraph()
     graph = fill_graph(attica_ds, graph)
+    time_end = time()
+    print(f"Graph Filling Duration = {time_end - time_start:.6f}")
 
-    # print_graph_nodes_edges(attica_ds, graph)
+    time_start = time()
+    shortest_path = perform_astar(graph=graph, source=list(graph.nodes())[0], target=list(graph.nodes())[-1], demo_site=attica_ds)
+    time_end = time()
+    print(f"A* Duration = {time_end - time_start:.6f}")
 
+    time_start = time()
     shortest_path = perform_dijkstra(graph=graph, source=list(graph.nodes())[0], target=list(graph.nodes())[-1])
+    time_end = time()
+    print(f"Dijkstra Duration = {time_end - time_start:.6f}")
 
     plot_graph(graph) # plot the graph
 

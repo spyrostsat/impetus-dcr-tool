@@ -10,3 +10,6 @@ def generate_pathways(interventions, n_steps):
                     result[index] = intervention
                 results.append(result)
     return results
+
+# all_interventions_numbers = [i for i in range(len(all_interventions))]
+# pathways = generate_pathways(all_interventions_numbers, attica_ds.total_time_steps) # these are all the possible pathways
