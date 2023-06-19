@@ -29,7 +29,7 @@ def main():
 
     shortest_path = perform_dijkstra(graph=graph, source=list(graph.nodes())[0], target=list(graph.nodes())[-1])
 
-    plot_graph(graph)
+    plot_graph(graph) # plot the graph
 
 if __name__ == "__main__":
     main()
